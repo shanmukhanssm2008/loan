@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1E3A5F">
+  <title>Loan Ledger</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header id="app-header">
+      <button id="back-btn" style="display:none" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15.833 10H4.167"/>
+          <path d="M9.167 5.833L4.167 10l5 4.167"/>
+        </svg>
+      </button>
+      <h1 id="header-title">Loan Ledger</h1>
+    </header>
+    <main id="main-content"></main>
+    <nav id="bottom-nav">
+      <button data-route="home" class="nav-item active" aria-label="Home">
+        <span class="nav-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l8-7 8 7v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9z"/>
+            <path d="M8 22V12h6v10"/>
+          </svg>
+        </span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button data-route="clients" class="nav-item" aria-label="Clients">
+        <span class="nav-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+            <circle cx="8.5" cy="7.5" r="4"/>
+            <path d="M20 18v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </span>
+        <span class="nav-label">Clients</span>
+      </button>
+      <button data-route="calendar" class="nav-item" aria-label="Calendar">
+        <span class="nav-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="16" height="16" rx="2" ry="2"/>
+            <path d="M16 2v4"/>
+            <path d="M6 2v4"/>
+            <path d="M2 10h18"/>
+          </svg>
+        </span>
+        <span class="nav-label">Calendar</span>
+      </button>
+    </nav>
+  </div>
+  <script src="js/db.js"></script>
+  <script src="js/screens.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
