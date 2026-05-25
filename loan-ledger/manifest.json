@@ -1,9 +1,0 @@
-{
-  "name": "Loan Ledger",
-  "short_name": "LoanLedger",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#F8FAFC",
-  "theme_color": "#1E3A5F",
-  "orientation": "portrait"
-}
